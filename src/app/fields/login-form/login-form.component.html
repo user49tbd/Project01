@@ -1,0 +1,23 @@
+<div class="Container">
+    <div class="Content">
+        <form [formGroup]="formG">
+            <div class="item itemLog">
+                <app-logo-comp imgUrl="/assets/icons/computer.png"></app-logo-comp>
+            </div>
+            <app-input-componenet typeI="text" nameI="Name" idV="namelog" [getInv]="formG.get('name')?.errors"
+            [cls]="checkName('name')" formControlName="name"></app-input-componenet>
+            <app-input-componenet typeI="password" nameI="Password" idV="passwordlog" 
+            [getInv]="formG.get('password')?.errors"
+            [cls]="checkName('password')" formControlName="password"></app-input-componenet>
+            <div class="btnList">
+                <app-buton-c [stlCls]="formG.errors ? 'error' : 'btn'" 
+                txt="Submit" (click)="submit()"></app-buton-c>
+                <app-buton-c [stlCls]="'btn'"  txt="reset" (click)="reset()"></app-buton-c>
+            </div>
+            <div *ngIf="formG.errors?.['error']" class="RemainingFields">
+                {{formG.errors?.['error']}}
+            </div>
+        </form>
+    </div>
+    <ng-template #selecMsg></ng-template>
+</div>

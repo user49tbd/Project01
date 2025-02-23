@@ -1,0 +1,300 @@
+@font-face {
+    font-family: secondC;
+    src: url("/assets/fonts/Second\ Child.otf");
+}
+
+.Logo {
+    font-family: secondC;
+    background-image: linear-gradient(to top right, cyan, purple);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 30px;
+}
+
+.Container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.navS{
+    position: relative;
+    height: 100%;
+    width: 50%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.navS > button,.navS > button > img{
+    aspect-ratio: 1/1;
+    height: 100%;
+}
+.navMain{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 20px 0px black;
+}
+.linkGroup{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.navMain > .linkGroup:nth-child(2), .navMain > .linkGroup:nth-child(2)>.navS{
+    justify-content: flex-end;
+}
+.navMain > .linkGroup:nth-child(2)>.navS{
+    padding-right: 20px;
+}
+.subNav, .subNav>a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subNav{
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly !important;
+    gap: 10px;
+}
+.subNav > a{
+    position: relative;
+    width: 100%;
+    height: 70%;
+    border-radius: 5px;
+    color: gray;
+    margin: 10px 5px 10px 5px;
+    background-color: white;
+    text-decoration: none;
+}
+.subNav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.subNav > a {
+    position: relative;
+}
+.Select::after{
+    opacity: 1 !important;
+    background-image: conic-gradient(from var(--angle), gray,white,gray) !important;
+}
+.subNav > a::after {
+    --angle: 0deg;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 120%;
+    background-image: conic-gradient(from var(--angle), cyan, purple, cyan);
+    border-radius: 5px;
+    z-index: -2;
+    opacity: 0;
+    transition: opacity 0.5s;
+    animation: anim1 0.5s linear both infinite;
+}
+
+.subNav > a:hover::after {
+    opacity: 1;
+}
+@keyframes anim1 {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+.btn{
+    width: 40%;
+    border-radius: 5px;
+    height: 70% !important;
+    background-image: linear-gradient(to top right,cyan,purple);
+    color: white;
+}
+.btnH{
+    background-color: transparent;
+}
+app-buton-c{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.navS > img{
+    height: 70%;
+    aspect-ratio: 1/1;
+    position: relative;
+}
+.userImg {
+    position: relative;
+    height: 70%;
+    aspect-ratio: 1/1;
+}
+.userImg > img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.userImg::after {
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 130%;
+    width: 130%;
+    background-image: conic-gradient(cyan,purple,cyan);
+    z-index: -1;
+    transform: translate(-50%, -50%);
+
+}
+.dblContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.mainPage{
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: auto;
+    overscroll-behavior: contain;
+}
+
+.sideNav{
+    width: 0%;
+    height: 100%;
+    transition: 0.5s;
+    transition-timing-function: linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.exibV{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    overflow: hidden;
+    gap: 15px;
+
+}
+.sdImgD{
+    width: 50%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.sdImgD::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    background-image: conic-gradient(transparent 70deg, blue, purple,cyan);
+    border-radius: 50%;
+}
+.sdImgD > img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    object-position: center;
+    clip-path: circle(50%);
+}
+.logContent{
+    width: 100%;
+    padding: 5px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+.btSignOut{
+    width: 70%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 25px;
+    border-radius: 5px;
+    color: white;
+    transition: 0.5s;
+    background-image: linear-gradient(to top right,cyan,blue,purple);
+
+}
+
+@property --q{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.btSignOut:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border-radius: 6px;
+    z-index: -1;
+    opacity: 0;
+    transition: 2s;
+
+}
+.btSignOut:hover:before {
+    background-image: conic-gradient(from var(--q),gray,white,gray);
+
+    opacity: 1;
+    animation-name: anim2;
+    animation-delay: 0s;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anim2 {
+    from{
+        --q:0deg;
+    }
+    to{
+        --q:360deg
+    }
+}
+
+

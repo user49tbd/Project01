@@ -1,0 +1,10 @@
+<div class="Item">
+    <div class="InputBox" [ngClass]="cls">
+        <label [attr.for]="idV">{{nameI}}</label>
+        <input [type]="typeI" [id]="idV" placeholder=" " [(ngModel)]="value" (input)="onChange(value)"
+            (blur)="onTouched()">
+    </div>
+    <div *ngIf="cls?.invalidCK == true" class="errMsg">
+        <p>Campo Inválido {{getInv?.['error']}}</p>
+    </div>
+</div>

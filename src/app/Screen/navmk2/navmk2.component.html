@@ -1,0 +1,52 @@
+<div class="Container">
+    <nav class="navMain">
+        <div class="linkGroup">
+            <div class="navS">
+                <button class="btnH" (click)="slider()"><img src="/assets/icons/menu.png"></button>
+                <a class="Logo" routerLink="/home">Project01</a>
+            </div>
+            <div class="subNav">
+                <!--a routerLinkActive="Select" routerLink="/log">Section03</a-->
+                <a *ngIf="userVal" routerLinkActive="Select" routerLink="/imgForm">ImgForm</a>
+                <a *ngIf="userVal" routerLinkActive="Select" routerLink="/lstD">List</a>
+                <a *ngIf="userVal" routerLinkActive="Select" routerLink="/lstU">List User</a>
+                <!--a routerLinkActive="Select" routerLink="/res">Section01</a>
+                <a routerLinkActive="Select" *ngIf="canA" routerLink="/form">Form</a>
+                <a routerLinkActive="Select" routerLink="/carsl">Section04</a>
+                <a routerLinkActive="Select" routerLink="/lstD">Section05</a-->
+            </div>
+        </div>
+        <div class="linkGroup">
+            <div class="navS">
+                <img src="/assets/icons/configuration.png">
+                <img src="/assets/icons/bell.png">
+                <div>
+                    <!--app-buton-c [stlCls]="'btn'" [txt]="userVal==null ? 'Login' : 'Logout' "
+                        (click)="userVal==null ? goLogin() : logOff()"></app-buton-c-->
+
+                    <app-buton-c [stlCls]="'btn'" [txt]="userVal == null ? 'Login' : 'Logout'" 
+                    (click)="handleClick()">
+                    </app-buton-c>
+                </div>
+                <div class="userImg"><img class="userImg" src="/assets/imgs/shark.jpg"></div>
+            </div>
+        </div>
+    </nav>
+    <div class="dblContent">
+        <div class="sideNav" #sideNav>
+
+            <div *ngIf="userVal" class="exibV">
+                <p>You are now logged in</p>
+                <div class="sdImgD"><img src="/assets/imgs/shark.jpg"></div>
+                <p>{{logInfo}}</p>
+                <div class="logContent"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam accusamus 
+                quia laboriosam nihil dolores blanditiis exercitationem quidem molestiae</p></div>
+                <button class="btSignOut" (click)="logOff()">Sign-out</button>
+            </div>
+        </div>
+        <div class="mainPage">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+</div>

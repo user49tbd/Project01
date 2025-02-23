@@ -1,0 +1,333 @@
+*{
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --q:0;
+}
+.Container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.LogContainer{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.5);
+    overflow: hidden;
+   
+}
+.DivLeft,.DivRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+.Scroll{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0%;
+    left: 0%;
+    right: 100%;
+    flex-direction: column;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 4;
+}
+.DivLeft{
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.DivRight{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    position: relative;
+    background-image: url('/assets/imgs/program.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.SlidB{
+    width: 100%;
+    aspect-ratio: 1/0.5;
+    max-height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0%;
+    z-index: 5;
+}
+.SlidB > span{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.SlidB > span:nth-child(1){
+    background-color: white;
+    color: black;
+}
+.Scroll > .con{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+}
+.con:nth-child(1){
+    height: 100%;
+    background-color: black;
+    position: relative;
+}
+.con:nth-child(2){
+    bottom: 0%;
+    /*height: var(--q);*/
+    position: absolute;
+    z-index: 4;
+    background-color: white;
+}
+/*
+.content{
+    bottom: 0%;
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    border: 2px solid red;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}*/
+/*
+.con1 {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 70%;
+    border: 2px solid purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}*/
+
+
+
+
+
+
+
+/*
+
+.logD {
+    background-image: linear-gradient(to top right, cyan, purple);
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.bkCo {
+    mask-image: url("/assets/icons/computer.png");
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-origin: content-box;
+    height: 50%;
+    aspect-ratio: 1/1;
+}*/
+app-logo-comp{
+    height: 50%;
+    aspect-ratio: 1/1;
+}
+.ContenContnr{
+    position: absolute;
+    bottom: 0px;
+    width: 80%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+}
+.ContenContnr > p{
+    border-left: 2px solid black;
+    padding-left: 10px;
+
+    background-clip: text;
+    background-image: linear-gradient(to top right,cyan,purple);
+    -webkit-text-fill-color: transparent;
+}
+/*
+.logD2 {
+    background-image: linear-gradient(to top right, cyan, purple);
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.bkCo2 {
+    mask-image: url("/assets/icons/check-mark_15761039.png");
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-origin: content-box;
+    height: 50%;
+    aspect-ratio: 1/1;
+}*/
+.ContenContnr2{
+    position: absolute;
+    top: 0px;
+    width: 80%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ContenContnr2 > p{
+    border-left: 2px solid white;
+    padding-left: 10px;
+
+    background-clip: text;
+    background-image: linear-gradient(to top right,cyan,purple);
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px;
+    margin: 20px;
+    gap: 20px;
+    padding: 20px;
+    width: calc(70% - 20px);
+    height: calc(100% - 20px);
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.5);
+}*/
+/*
+.item{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.itemLog{
+    height: 100px !important;
+}
+.item > .bkCo2,.item > .bkCo{
+    height: 100%;
+}
+.item > label{
+    position: absolute;
+    top: 100%;
+    left: 2%;
+    color: white;
+    transform: translateY(-100%);
+    text-transform: uppercase;
+    transition: 0.5s;
+    font-size: 20px;
+}*/
+/*
+.item > .input{
+    width: 100%;
+    height: 100%;
+}
+.input{
+    background-color: transparent;
+}
+.input:focus ~label{
+    top: 0%;
+    font-size: 10px;
+}
+.input:placeholder-shown {
+    border-bottom: 2px solid white
+}
+.input:not(:placeholder-shown){
+    border-bottom: 2px solid  green !important;
+}
+.input:not(:placeholder-shown) ~ label{
+    top: 0%;
+    font-size: 10px;
+    color: green !important;
+}
+.input:focus{
+    outline: none;
+}*/
+/*
+.btnG{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 50px;
+}
+.btnG > button{
+    height: 100%;
+    width: 50%;
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    transition: 0.5s;
+    font-size: 20px;
+}
+.btnG > button:hover{
+    color: white;
+    background-color: green;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+}*/
+.DivLeft{
+    background-image: url("/assets/imgs/poluicao.jpg");
+}
+
+app-login-form,app-sign-up-form{
+    width: calc(80% - 20px);
+    height: calc(100% - 20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,85 @@
+.Item,.InputBox,textarea{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Item{
+    width: 100%;
+    flex-direction: column;
+}
+textarea{
+    width: 100%;
+    flex-direction: column;
+    resize: none;
+}
+textarea{
+    background-color: transparent;
+}
+.InputBox{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+/*
+.InputBox > label{
+    position: absolute;
+    left: 0px;
+    transition: 0.5s;
+    top: 100%;
+    transform: translateY(-100%);
+}*/
+.InputBox > textarea{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none !important;
+    transition: 0.5s;
+}
+/*
+.InputBox:has( label + input:focus) label{
+    top: 0%;
+    transform: translateY(0%);
+    font-size: 9px;
+}
+.InputBox:has( label + :not(input:placeholder-shown)) label{
+    top: 0%;
+    transform: translateY(0%);
+    font-size: 9px;
+}*/
+/*
+.validCK > label{
+    color: green;
+}
+.validCK > input{
+    border-bottom: 2px solid green;
+}
+.invalidCK > label{
+    color: red;
+}
+.invalidCK > input{
+    border-bottom: 2px solid red;
+}*/
+.validCK{
+    border: 2px solid green !important;
+}
+.invalidCK{
+    border: 2px solid red !important;
+}
+.errMsg{
+    width: 100%;
+    padding: 5px;
+    height: auto;
+    background-color: red;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}

@@ -1,0 +1,41 @@
+<div class="Container">
+  <div class="Content">
+    <div class="DLeft">
+      <app-img-layout field="fileS"></app-img-layout>
+      <button class="rmvImgs" (click)="resetImg()">X</button>
+    </div>
+    <div class="DRight">
+      <form [formGroup]="frmG">
+        <!--div class="item">
+                  <input class="input" type="text" id="nameId" placeholder=" " formControlName="name">
+                  <label for="nameId">Name</label>
+                </div-->
+        <app-input-componenet typeI="text" nameI="Name" idV="nameId" [getInv]="frmG.get('name')?.errors"
+          [cls]="checkName('name')" formControlName="name"></app-input-componenet>
+
+        <!--div class="item">
+                  <textarea maxlength="50" class="inputTxt" id="txtA" formControlName="desc"></textarea>
+
+
+                  idV="descId" 
+                [getInv]="frmG.get('desc')?.errors"
+                [cls]="checkName('desc')" formControlName="desc"
+                </div-->
+        <app-input-txt-area idV="descId" [cls]="checkName('desc')" [getInv]="frmG.get('desc')?.errors"
+          formControlName="desc"></app-input-txt-area>
+
+        <input class="inputF" type="file" id="fileS" accept="image/*" multiple (input)="onFileChange($event)"
+        (blur)="watchImgs()">
+
+        <div class="btnG">
+          <app-buton-c [stlCls]="frmG.errors ? 'error' : 'btn'" txt="Submit" (click)="subs()"></app-buton-c>
+          <app-buton-c [stlCls]="'btn'" txt="reset" (click)="reset()"></app-buton-c>
+        </div>
+        <div *ngIf="frmG.errors?.['error']" class="RemainingFields">
+          {{frmG.errors?.['error']}}
+        </div>
+      </form>
+    </div>
+  </div>
+  <ng-template #selecMsg></ng-template>
+</div>

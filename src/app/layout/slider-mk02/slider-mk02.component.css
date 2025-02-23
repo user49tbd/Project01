@@ -1,0 +1,135 @@
+@font-face {
+    font-family: ironS;
+    src: url('/assets/fonts/Iron\ Shark.otf');
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+.Container{
+    width: 100%;
+    /*height: 350px;*/
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.MainSlideC{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.SlideC{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.8);
+    border-radius: 15px;
+
+}
+.Sl{
+    position: absolute;
+    height: 100%;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0px 10px 0px;
+}
+.Sl > div{
+    min-width: 20%;
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    height: 20%;
+    aspect-ratio: 1/1;
+    font-size: 30px;
+    clip-path: circle(50%);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    transition: 0.5s;
+    z-index: 2;
+}
+.btn:hover{
+    opacity: 1;
+}
+.btl{
+    left: 0.5%;
+}
+.btr{  
+    right: 0.5%;
+}
+.BList{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+.ball{
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    font-size: 0px;
+}
+.ball:hover{
+    background-color: orange !important;
+}
+.Sl > div > span{
+    display: none;
+}
+.cardCont > *{
+    border-radius: 15px;
+}
+.cardCont > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: center;
+    border-radius: 15px;
+}
+.cardCont{
+    position: relative;
+    /*box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.8);*/
+}
+.ContentTxt{
+    backdrop-filter: blur(2px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    padding: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.ContentTxt > h4{
+    font-family: ironS;
+    color: orange;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-left: 2px solid white;
+    padding-left: 10px;
+}
+.ContentTxt > p{
+    color: white;
+    text-align: justify;
+    bottom: 0px;
+}

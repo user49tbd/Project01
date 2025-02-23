@@ -1,0 +1,30 @@
+<div class="Container">
+    <div class="LogContainer">
+        <div class="DivLeft">
+            <!--app-form-log></app-form-log-->
+            <app-sign-up-form></app-sign-up-form>
+        </div>
+        <div class="DivRight">
+           <app-login-form></app-login-form>
+        </div>
+        <div class="Scroll">
+            <div class="con">
+                <div class="ContenContnr2">
+                    <app-logo-comp imgUrl="/assets/icons/check-mark_15761039.png"></app-logo-comp>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="con">
+                <div class="ContenContnr">
+                    <app-logo-comp imgUrl="/assets/icons/computer.png"></app-logo-comp>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="SlidB">
+                <span (click)="log1('l')">Login</span>
+                <span (click)="log1('r')">Sign-In</span>
+            </div>
+        </div>
+    </div>
+    <ng-template #selecMsg></ng-template>
+</div>

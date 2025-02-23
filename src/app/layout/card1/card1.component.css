@@ -1,0 +1,111 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+.Container{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgLayout{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.imgLayout > label{
+    width: 20%;
+    height: 100%;
+    transition: 0.5s;
+    border-radius: 35px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+.lb > div{
+    width: 100%;
+    height: 100%;
+}
+input[type=radio]{
+    display: none;
+}
+input:checked + label > div {
+    background-color: white;
+}
+input:checked + label{
+    width: 100%;
+    transition: 0.5s;
+}
+.subContainer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+.subContainer > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+.Content{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    gap: 20px;
+}
+.Content > .num{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-color: #225;
+    clip-path: circle(50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    left: 0px;
+}
+.tp{
+    display: none;
+}
+input:not(:checked) + label > div > div > .num{
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+input:not(:checked) + label > div > div > .txt{
+    width: 0%;
+    overflow: hidden;
+    position: absolute;
+    right: 0px;
+    transition: 0.5s;
+}
+.Content > .txt{
+    color: white;
+    width: 80%;
+    position: absolute;
+    text-align: justify;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    right: 0px;
+    transition: 0.5s;
+
+}
+.Content > .txt > h3{
+    color: orange;
+}

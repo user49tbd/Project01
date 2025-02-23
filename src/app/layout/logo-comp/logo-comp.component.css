@@ -1,0 +1,19 @@
+.logD {
+    background-image: linear-gradient(to top right, cyan, purple);
+}
+.logD,.bkco{
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bkCo {
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-origin: content-box;
+    height: 100%;
+    aspect-ratio: 1/1;
+}

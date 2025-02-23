@@ -1,0 +1,83 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+.Container{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spin{
+    height: 100%;
+    aspect-ratio: 1/1;
+    position: relative;
+    animation-name: animSpin;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-duration: 5s;
+}
+@keyframes animSpin{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+.spot{
+    position: absolute;
+    width: 10%;
+    aspect-ratio: 1/1;
+    clip-path: circle(50%);
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0.5;
+}
+.spin > span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100%/2);
+    height: 2px; 
+    transform-origin: 0% 50%;
+    transform: translateY(-50%) rotateZ(calc((360deg/var(--qtd))*var(--ls)));
+}
+.spin > span::before{
+    content: '';
+    background-color: blue;
+    width: 0%;
+    height: 7px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateX(-100%) translateY(-50%);
+    animation-name: animfrag;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+    animation-delay: calc(0.1s*var(--ls));
+}
+@keyframes animfrag {
+    0%{
+        width: 30%;
+        background-color: cyan;
+        opacity: 0;
+    }
+    50%{
+        background-color: blue;
+    }
+    100%{
+        width: 0%;
+        background-color: purple;
+        opacity: 1;
+    }
+}

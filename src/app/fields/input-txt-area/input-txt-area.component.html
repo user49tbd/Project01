@@ -1,0 +1,11 @@
+<div class="Item">
+    <div class="InputBox" [ngClass]="cls">
+        <textarea maxlength="50" [id]="idV" [(ngModel)]="value" (input)="onChange(value)"
+        (blur)="onTouched()"></textarea>
+        <!--input [id]="idV" placeholder=" " [(ngModel)]="value" (input)="onChange(value)"
+            (blur)="onTouched()"-->
+    </div>
+    <div *ngIf="cls?.invalidCK == true" class="errMsg">
+        <p>Campo Inválido {{getInv?.['error']}}</p>
+    </div>
+</div>

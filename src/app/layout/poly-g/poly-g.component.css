@@ -1,0 +1,44 @@
+.polyEffect{
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+
+}
+.LineInset{
+    left: calc((100% / var(--qtd)) / 2 + ((var(--gp)/2) / var(--qtd))) !important;
+}
+.LineInset2{
+    justify-content: center;
+}
+
+.Line{
+    position: absolute;
+    top: calc(((100% / 4) * var(--ln)) + ((var(--gp)/2)));
+    left: 0%;
+    width: 100%;
+    height: calc((100% / 4) - ((var(--gp) / 2)));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gp);
+}
+.ItemUp{
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.ItemDown{
+    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+}
+
+.Item{
+    width: calc((100%/var(--qtd)) - 10px);
+    height: 100%;
+}
+.Item > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+

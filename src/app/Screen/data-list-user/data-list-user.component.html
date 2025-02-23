@@ -1,0 +1,27 @@
+<div class="Container">
+    <div *ngIf="obj; else loading" class="Content">
+        <table *ngIf="obj.length > 0" class="Container">
+            <thead>
+                <tr>
+                    <th>Name</th><th>Description</th><th>Images</th><th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let res of obj" class="Item">
+                    <td>{{res.title}}</td>
+                    <td>{{res.desc}}</td>
+                    <td><app-img-layout [arrV]="res.imgs"></app-img-layout></td>
+                    <td><img src="/assets/icons/delete.png" (click)="removeItem(res.id)"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div *ngIf="obj.length == 0">
+            <p>Nenhum dado cadastrado</p>
+        </div>
+    </div>
+    <ng-template #loading>
+        <app-load-mk01></app-load-mk01>
+    </ng-template>
+    <ng-template #selecMsg></ng-template>
+</div>
+
